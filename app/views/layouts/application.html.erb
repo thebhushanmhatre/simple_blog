@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SimpleBlog</title>
+	<%= csrf_meta_tags %>
+
+	<%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' %>
+
+
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<a class="navbar-brand pr-5" href="#"> <h1><i> Bhushan's Blog </i></h1></a>
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item nav-link pr-5"><%= link_to 'Home', home_path %></li>
+			<li class="nav-item nav-link"><%= link_to 'Create post', new_post_path %></li>
+		</ul>
+
+	</nav>
+
+	<div class="container">
+		<%= yield %>
+	</div>
+
+</body>
+</html>

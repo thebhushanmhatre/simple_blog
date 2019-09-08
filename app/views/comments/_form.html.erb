@@ -1,0 +1,15 @@
+<h4>Add Comments</h4>
+
+<%= form_for([@post, @post.comments.build]) do |f| %>
+	<p>
+		<%= f.label :username %><br>
+		<%= f.text_field(:username, {:class => 'form_control'} ) %>
+	</p>
+	<p>
+		<%= f.label :body %><br>
+		<%= f.text_field(:body, {:class => 'form_control'} ) %>
+	</p>
+	<p>
+		<%= f.submit({:class => 'btn btn-success'}) %>
+	</p>
+<% end %>
